@@ -19,10 +19,10 @@ class WP_Francophone {
 	 * @constructor
 	 */
 	function WP_Francophone() {
-		add_filter( "the_time", array( $this, "date_i18n" ) );
-		add_filter( "get_the_time", array( $this, "date_i18n" ) );
-		add_filter( "get_comment_time", array( $this, "date_i18n" ) );
-		add_filter( "get_comment_date", array( $this, "date_i18n") );
+		add_filter( 'the_time', array( $this, 'date_i18n' ) );
+		add_filter( 'get_the_time', array( $this, 'date_i18n' ) );
+		add_filter( 'get_comment_time', array( $this, 'date_i18n' ) );
+		add_filter( 'get_comment_date', array( $this, 'date_i18n') );
 	}
 
 	/**
@@ -30,7 +30,7 @@ class WP_Francophone {
 	 * return string
 	 */
 	function date_i18n( $date ) {
-		return preg_replace("/(\s|^)1\s/","1<sup>er</sup> ",$date);
+		return preg_replace('/(\s|^)1\s/','1<sup>er</sup> ',$date);
 	}
 
 }
