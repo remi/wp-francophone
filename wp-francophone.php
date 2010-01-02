@@ -22,7 +22,7 @@ class WP_Francophone {
 		add_filter( "the_time", array( $this, "date_i18n" ) );
 		add_filter( "get_the_time", array( $this, "date_i18n" ) );
 		add_filter( "get_comment_time", array( $this, "date_i18n" ) );
-		add_filter( "get_comment_date", array( $this, "date_i18n")  );
+		add_filter( "get_comment_date", array( $this, "date_i18n") );
 	}
 
 	/**
