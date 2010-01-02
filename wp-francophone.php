@@ -30,7 +30,7 @@ class WP_Francophone {
 	 * return string
 	 */
 	function date_i18n( $date ) {
-		return preg_replace("'(\s|^)1\s'","1<sup>er</sup> ",$date);
+		return preg_replace("/(\s|^)1\s/","1<sup>er</sup> ",$date);
 	}
 
 }
